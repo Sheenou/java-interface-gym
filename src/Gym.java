@@ -11,7 +11,7 @@ public class Gym {
         this.athletes = new ArrayList<>();
     }
 
-    public boolean newAthlete(Athlete athlete) {
+    public boolean addAthlete(Athlete athlete) {
         try {
             this.athletes.add(athlete);
             return true;

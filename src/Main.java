@@ -1,10 +1,10 @@
 public class Main {
 
     public static void main(String[] args) {
-        Gym gym = new Gym("Super džim", 120);
+        Gym gym = new Gym("Jim", 120);
 
         Athlete pepa = new BasketballPlayer("Pepa", "Pepovič", "muž", 69, 180);
-        gym.newAthlete(pepa);
+        gym.addAthlete(pepa);
 
         System.out.println(gym.toString());
     }

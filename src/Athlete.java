@@ -15,17 +15,17 @@ abstract public class Athlete implements IMovement {
 
     @Override
     public void comes() {
-        System.out.println(this.firstName + this.lastName + "přichází.");
+        System.out.println(this.firstName + this.lastName + " arrived.");
     }
 
     @Override
     public void trains() {
-        System.out.println(this.firstName + this.lastName + "nezapomene na rozcvičku.");
+        System.out.println(this.firstName + this.lastName + " is training.");
     }
 
     @Override
     public void leaves() {
-        System.out.println(this.firstName + this.lastName + "odchází.");
+        System.out.println(this.firstName + this.lastName + " left.");
     }
 
     @Override
