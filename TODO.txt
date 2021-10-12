@@ -1,0 +1,9 @@
+IDEAS
+- add more classes which inherit from Athlete (= more types of athletes)
+- think of more methods for interface IMovement or/and add more interfaces
+- bring some new ideas into the pool of what can we extend the project with
+	- instructors? 
+	- specific sports/training classes? 
+	- personal trainers?
+	- gym's timetable?
+	- matching up people who need training partners/group/team for their activities (team sports, martial arts)?
