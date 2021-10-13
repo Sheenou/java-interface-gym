@@ -9,7 +9,7 @@ public class BasketballPlayer extends Athlete{
     }
 
     public void trains() {
-        System.out.println(this.firstName + this.lastName + " trains shooting at basket.");
+        System.out.println(this.firstName + " " + this.lastName + " trains shooting at basket.");
     }
 
     @Override

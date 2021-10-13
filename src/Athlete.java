@@ -16,30 +16,25 @@ abstract public class Athlete implements IMovement {
         this.gender = gender;
         this.weight = weight;
         this.height = height;
-        this.timetable = new double[7][2];    // 0-1 monday, 2-3 tuesday, 4-5 wednesday...
+        this.timetable = new double[7][2];
     }
 
-    public void setTimetable(int position, double trainingStart, double trainingEnd) {
-        System.out.println(position);
-        System.out.println(trainingStart);
-        System.out.println(trainingEnd);
-
-        this.timetable[position][0] = trainingStart;
-        this.timetable[position][1] = trainingEnd;
+    public void setTimetable(int day, double trainingStart, double trainingEnd) {
+        this.timetable[day][0] = trainingStart;
+        this.timetable[day][1] = trainingEnd;
     }
 
     @Override
     public void comes() {
-        System.out.println(this.firstName + this.lastName + " arrived.");
+        System.out.println(this.firstName + " " + this.lastName + " arrived.");
     }
 
     @Override
-    public void trains() {
-    }
+    abstract public void trains();
 
     @Override
     public void leaves() {
-        System.out.println(this.firstName + this.lastName + " left.");
+        System.out.println(this.firstName + " " + this.lastName + " left.");
     }
 
     public void printTimetable() {
