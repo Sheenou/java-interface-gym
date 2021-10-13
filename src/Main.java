@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         Gym gym = new Gym("Jim", 120);
 
-        Athlete pepa = new BasketballPlayer("Pepa", "Pepovič", "muž", 69, 180, "left wing", "right");
+        Athlete pepa = new BasketballPlayer("Pepa", "Pepovič", Gender.MALE, 69, 180, BasketballPosition.LEFT_WING, DominantHand.LEFT);
         gym.addAthlete(pepa);
         /*
         System.out.println(gym.toString());
@@ -50,8 +50,16 @@ public class Main {
         String firstName = input.next();
         System.out.print("enter lastname: ");
         String lastName = input.next();
-        System.out.print("enter gender: ");
-        String gender = input.next();
+
+        int genderSelect;
+        System.out.println("select gender: "+
+                    "\n0 - male"+
+                    "\n1 - female");
+        genderSelect = input.nextInt();
+        Gender gender;
+        if (genderSelect == 0) gender = Gender.MALE;
+        else gender = Gender.FEMALE;
+
         System.out.print("enter weight: ");
         float weight = input.nextFloat();
         System.out.print("enter height: ");
@@ -68,10 +76,26 @@ public class Main {
 
             switch (action) {
                 case 1:
-                    System.out.print("enter player's position:");
-                    String position = input.nextLine();
-                    System.out.print("enter player's dominant hand:");
-                    String dominantHand = input.nextLine();
+                    int positionSelect;
+                    System.out.println("select player's position: "+
+                            "\n0 - left wing"+
+                            "\n1 - right wing"+
+                            "\n2 - center");
+                    positionSelect = input.nextInt();
+                    BasketballPosition position;
+                    if (positionSelect == 0) position = BasketballPosition.LEFT_WING;
+                    else if (positionSelect == 1) position = BasketballPosition.RIGHT_WING;
+                    else position = BasketballPosition.CENTER;
+
+                    int handSelect;
+                    System.out.println("select player's dominant hand: "+
+                            "\n0 - left"+
+                            "\n1 - right");
+                    handSelect = input.nextInt();
+                    DominantHand dominantHand;
+                    if (handSelect == 0) dominantHand = DominantHand.LEFT;
+                    else dominantHand = DominantHand.RIGHT;
+
                     gym.addAthlete(new BasketballPlayer(firstName, lastName, gender, weight, height, position, dominantHand));
                     break;
                 case 2:

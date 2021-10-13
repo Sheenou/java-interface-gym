@@ -1,7 +1,7 @@
 public class WeightLifter extends Athlete {
     protected double maxWeight;
 
-    public WeightLifter(String firstName, String lastName, String gender, float weight, float height, double maxWeight) {
+    public WeightLifter(String firstName, String lastName, Gender gender, float weight, float height, double maxWeight) {
         super(firstName, lastName, gender, weight, height);
         this.maxWeight = maxWeight;
     }
