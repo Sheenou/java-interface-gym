@@ -7,14 +7,6 @@ public class Main {
     public static void main(String[] args) {
         Gym gym = new Gym("Jim", 120);
 
-        Athlete pepa = new BasketballPlayer("Pepa", "Pepovič", "muž", 69, 180, "left wing", "right");
-        gym.addAthlete(pepa);
-
-        System.out.println(gym.toString());
-
-        pepa.setTimetable(0, 15.15, 18.20);
-        pepa.printTimetable();
-
         menu(gym);
         System.out.println(gym);
     }
@@ -22,10 +14,13 @@ public class Main {
     public static void menu(Gym gym) {
         int action = -1;
         do {
-            System.out.println("1 - add an athlete"
-                    +"\n2 - remove an athlete"
-                    +"\n0 - end");
-            System.out.print("enter your selection: ");
+            System.out.println("1 - Add an athlete" + "\n" +
+                            "2 - Remove an athlete" + "\n" +
+                            "3 - Print all athletes" + "\n" +
+                            "0 - Exit"
+            );
+
+            System.out.print("\nEnter your selection: \n");
             action = input.nextInt();
 
             switch (action) {
@@ -37,33 +32,34 @@ public class Main {
     }
 
     public static void addAthlete(Gym gym) {
-        System.out.print("enter firstname: ");
+        System.out.print("Enter the firstname: \n");
         String firstName = input.next();
-        System.out.print("enter lastname: ");
+        System.out.print("Enter the lastname: \n");
         String lastName = input.next();
-        System.out.print("enter gender: ");
-        String gender = input.next();
-        System.out.print("enter weight: ");
+        // TODO FIX
+        System.out.print("Enter the gender: \n");
+        System.out.print("Enter the weight: \n");
         float weight = input.nextFloat();
-        System.out.println(weight);
-        System.out.print("enter height: ");
+        System.out.print("Enter the height: \n");
         float height = input.nextFloat();
 
         int action;
         do {
-            System.out.println("select type of athlete"+
-                    "\n1 - basketball player"+
-                    "\n0 - end");
-            System.out.print("enter your selection: ");
+            System.out.println(
+                    "Select the type of the athlete" + "\n" +
+                    "1 - Basketball player" + "\n" +
+                    "0 - End");
+
+            System.out.print("\nEnter your selection: \n");
             action = input.nextInt();
 
             switch (action) {
                 case 1:
-                    System.out.println("enter player's position:");
-                    String position = input.next();
-                    System.out.println("enter player's dominant hand:");
-                    String dominantHand = input.next();
-                    gym.addAthlete(new BasketballPlayer(firstName, lastName, gender, weight, height, position, dominantHand));
+                    // TODO fix position and dominant hand selection
+                    System.out.println("Enter the player's position:");
+                    System.out.println("Enter the player's dominant hand:");
+                    gym.addAthlete(new BasketballPlayer(firstName, lastName, Gender.MALE, weight, height, BasketballPosition.RIGHT_WING, DominantHand.RIGHT));
+                    action = 0;
                     break;
             }
         } while (action != 0);
