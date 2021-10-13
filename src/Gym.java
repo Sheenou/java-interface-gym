@@ -20,6 +20,10 @@ public class Gym {
         }
     }
 
+    public void setEntryCost(float entryCost) {
+        this.entryCost = entryCost;
+    }
+
     @Override
     public String toString() {
         return "Gym{" +
