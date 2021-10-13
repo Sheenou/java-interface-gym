@@ -1,16 +1,13 @@
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-
 abstract public class Athlete implements IMovement {
     protected String firstName;
     protected String lastName;
-    protected String gender;
+    protected Gender gender;
     protected float weight;
     protected float height;
     protected double[][] timetable;
 
 
-    public Athlete(String firstName, String lastName, String gender, float weight, float height) {
+    public Athlete(String firstName, String lastName, Gender gender, float weight, float height) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
