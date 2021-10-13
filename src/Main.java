@@ -7,27 +7,17 @@ public class Main {
 
     public static void main(String[] args) {
         Gym gym = new Gym("Jim", 120);
-
-        Athlete pepa = new BasketballPlayer("Pepa", "Pepovič", Gender.MALE, 69, 180, BasketballPosition.LEFT_WING, DominantHand.LEFT);
-        gym.addAthlete(pepa);
-        /*
-        System.out.println(gym.toString());
-
-        pepa.setTimetable(0, 15.15, 18.20);
-        pepa.printTimetable();
-         */
-
         menu(gym);
     }
 
     public static void menu(Gym gym) {
         int action;
         do {
-            System.out.println("1 - add an athlete"
-                    +"\n2 - select an athlete"
-                    +"\n3 - print gym"
-                    +"\n0 - end");
-            System.out.print("enter your selection: ");
+            System.out.println("1 - add an athlete" + "\n" +
+                    "2 - select an athlete" + "\n" +
+                    "3 - print gym" + "\n" +
+                    "0 - end");
+            System.out.print("enter your selection: \n");
             action = input.nextInt();
 
             switch (action) {
@@ -46,41 +36,41 @@ public class Main {
     }
 
     public static void addAthlete(Gym gym) {
-        System.out.print("enter firstname: ");
+        System.out.print("enter firstname: \n");
         String firstName = input.next();
-        System.out.print("enter lastname: ");
+        System.out.print("enter lastname: \n");
         String lastName = input.next();
 
         int genderSelect;
-        System.out.println("select gender: "+
-                    "\n0 - male"+
-                    "\n1 - female");
+        System.out.println("select gender: " + "\n" +
+                    "0 - male" + "\n" +
+                    "1 - female");
         genderSelect = input.nextInt();
         Gender gender;
         if (genderSelect == 0) gender = Gender.MALE;
         else gender = Gender.FEMALE;
 
-        System.out.print("enter weight: ");
+        System.out.print("enter weight: \n");
         float weight = input.nextFloat();
-        System.out.print("enter height: ");
+        System.out.print("enter height: \n");
         float height = input.nextFloat();
 
         int action;
         do {
-            System.out.println("select type of athlete"+
-                    "\n1 - basketball player"+
-                    "\n2 - WeightLifter"+
-                    "\n0 - end");
-            System.out.print("enter your selection: ");
+            System.out.println("select type of athlete" + "\n" +
+                    "1 - basketball player" + "\n" +
+                    "2 - WeightLifter" + "\n" +
+                    "0 - end");
+            System.out.print("enter your selection: \n");
             action = input.nextInt();
 
             switch (action) {
                 case 1:
                     int positionSelect;
-                    System.out.println("select player's position: "+
-                            "\n0 - left wing"+
-                            "\n1 - right wing"+
-                            "\n2 - center");
+                    System.out.println("select player's position: " + "\n" +
+                            "0 - left wing" + "\n" +
+                            "1 - right wing" + "\n" +
+                            "2 - center");
                     positionSelect = input.nextInt();
                     BasketballPosition position;
                     if (positionSelect == 0) position = BasketballPosition.LEFT_WING;
@@ -88,9 +78,9 @@ public class Main {
                     else position = BasketballPosition.CENTER;
 
                     int handSelect;
-                    System.out.println("select player's dominant hand: "+
-                            "\n0 - left"+
-                            "\n1 - right");
+                    System.out.println("select player's dominant hand: " + "\n" +
+                            "0 - left" + "\n" +
+                            "1 - right");
                     handSelect = input.nextInt();
                     DominantHand dominantHand;
                     if (handSelect == 0) dominantHand = DominantHand.LEFT;
@@ -99,7 +89,7 @@ public class Main {
                     gym.addAthlete(new BasketballPlayer(firstName, lastName, gender, weight, height, position, dominantHand));
                     break;
                 case 2:
-                    System.out.println("enter lifter's max lifted weight:");
+                    System.out.print("enter lifter's max lifted weight: \n");
                     Double maxWeight = input.nextDouble();
                     gym.addAthlete(new WeightLifter(firstName, lastName, gender, weight, height, maxWeight));
                     break;
@@ -113,15 +103,15 @@ public class Main {
         else {
             int action;
             do {
-                System.out.println("1 - remove athlete"
-                        + "\n2 - print athlete"
-                        + "\n3 - athlete comes"
-                        + "\n4 - athlete starts training"
-                        + "\n5 - athlete leaves"
-                        + "\n6 - set athlete's timetable"
-                        + "\n7 - print athlete's timetable"
-                        + "\n0 - end");
-                System.out.print("enter your selection: ");
+                System.out.println("1 - remove athlete" + "\n" +
+                        "2 - print athlete" + "\n" +
+                        "3 - athlete comes" + "\n" +
+                        "4 - athlete starts training" + "\n" +
+                        "5 - athlete leaves" + "\n" +
+                        "6 - set athlete's timetable" + "\n" +
+                        "7 - print athlete's timetable" + "\n" +
+                        "0 - end");
+                System.out.print("enter your selection: \n");
                 action = input.nextInt();
 
                 switch (action) {
@@ -154,9 +144,9 @@ public class Main {
     }
 
     public static int findAthlete(Gym gym) {
-        System.out.print("enter firstname: ");
+        System.out.print("enter firstname: \n");
         String firstName = input.next();
-        System.out.print("enter lastname: ");
+        System.out.print("enter lastname: \n");
         String lastName = input.next();
 
         return gym.findAthlete(firstName, lastName);
@@ -165,21 +155,21 @@ public class Main {
     public static void setAthleteTimetable(Gym gym, int athleteIndex) {
         int day;
         do {
-            System.out.println("select day:"
-                    + "\n1 - monday"
-                    + "\n2 - tuesday"
-                    + "\n3 - wednesday"
-                    + "\n4 - thursday"
-                    + "\n5 - friday"
-                    + "\n6 - saturday"
-                    + "\n7 - sunday"
-                    + "\n0 - end");
-            System.out.print("enter your selection: ");
+            System.out.println("select day:" + "\n" +
+                    "1 - monday" + "\n" +
+                    "2 - tuesday" + "\n" +
+                    "3 - wednesday" + "\n" +
+                    "4 - thursday" + "\n" +
+                    "5 - friday" + "\n" +
+                    "6 - saturday" + "\n" +
+                    "7 - sunday" + "\n" +
+                    "0 - end");
+            System.out.print("enter your selection: \n");
             day = input.nextInt();
             if (day > 0 && day < 8) {
-                System.out.print("enter training start time: ");
+                System.out.print("enter training start time: \n");
                 double trainingStart = input.nextDouble();
-                System.out.print("enter training end time: ");
+                System.out.print("enter training end time: \n");
                 double trainingEnd = input.nextDouble();
                 if (trainingEnd > trainingStart) gym.setAthleteTimetable(athleteIndex,day-1, trainingStart, trainingEnd);
                 else System.out.println("-- training times are not valid");
