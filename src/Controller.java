@@ -32,8 +32,6 @@ public class Controller {
     @FXML
     public RadioButton genderBP1;
     @FXML
-    public RadioButton genderBP2;
-    @FXML
     public RadioButton position1;
     @FXML
     public RadioButton position2;
@@ -43,6 +41,18 @@ public class Controller {
     public RadioButton dominantHand1;
     @FXML
     public RadioButton dominantHand2;
+    @FXML
+    public TextField firstNameWL;
+    @FXML
+    public TextField lastNameWL;
+    @FXML
+    public TextField weightWL;
+    @FXML
+    public TextField heightWL;
+    @FXML
+    public RadioButton genderWL1;
+    @FXML
+    public TextField maxWeight;
     @FXML
     public Label printAthletes;
 
@@ -91,6 +101,25 @@ public class Controller {
         BasketballPlayer basketballPlayer = new BasketballPlayer(firstName, lastName, gender, weight, height, position, dominantHand);
 
         gym.addAthlete(basketballPlayer);
+        System.out.println(gym.getAthletes());
+    }
+
+    public void handleAddWL(ActionEvent e) {
+        String firstName = firstNameWL.getText();
+        String lastName = lastNameWL.getText();
+        float weight = Float.parseFloat(weightWL.getText());
+        float height = Float.parseFloat(heightWL.getText());
+
+        Gender gender;
+        BasketballPosition position;
+        DominantHand dominantHand;
+
+        if (genderWL1.isSelected()) gender = Gender.MALE;
+        else gender = Gender.FEMALE;
+
+        WeightLifter weightLifter = new WeightLifter(firstName, lastName, gender, weight, height, Double.parseDouble(maxWeight.getText()));
+
+        gym.addAthlete(weightLifter);
         System.out.println(gym.getAthletes());
     }
 
