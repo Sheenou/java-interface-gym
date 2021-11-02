@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="msinogl.gym.Controller">
+    <children>
+        <Button fx:id="mainMenuButton" layoutX="175.0" layoutY="305.0" mnemonicParsing="false" onAction="#switchToMainMenu" text="Main menu" />
+        <Button fx:id="addWeightlifterButton" layoutX="290.0" layoutY="305.0" mnemonicParsing="false" onAction="#newWeightlifter" text="Add an athlete" />
+        <TextField fx:id="firstName" layoutX="175.0" layoutY="70.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter firstname" />
+        <TextField fx:id="lastName" layoutX="175.0" layoutY="105.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter lastname" />
+        <TextField fx:id="weight" layoutX="175.0" layoutY="141.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter weight" />
+        <TextField fx:id="height" layoutX="175.0" layoutY="177.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter height" />
+        <Label layoutX="175.0" layoutY="214.0" prefHeight="17.0" prefWidth="84.0" text="Select gender:" />
+        <RadioButton fx:id="gender1" layoutX="275.0" layoutY="214.0" mnemonicParsing="false" text="Male">
+            <toggleGroup>
+                <ToggleGroup fx:id="genderGroup" />
+            </toggleGroup></RadioButton>
+        <RadioButton fx:id="gender2" selected="true" layoutX="367.0" layoutY="214.0" mnemonicParsing="false" text="Female" toggleGroup="$genderGroup" />
+      <TextField fx:id="maxWeight" layoutX="175.0" layoutY="244.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter max lifted weight" />
+      <Label layoutX="136.0" layoutY="8.0" text="Add a weightlifter">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="msinogl.gym.Controller">
+   <children>
+      <Button fx:id="newAthleteButton" layoutX="244.0" layoutY="94.0" mnemonicParsing="false" onAction="#newAthlete" text="New Athlete" />
+      <Label layoutX="166.0" layoutY="29.0" text="Gym manager" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="printAthletesButton" onAction="#switchToPrintAthletes" layoutX="242.0" layoutY="130.0" mnemonicParsing="false" text="Print athletes" />
+   </children>
+</AnchorPane>
