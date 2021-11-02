@@ -1,12 +1,32 @@
-import java.util.Scanner;
+//import java.util.Scanner;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class Main {
+public class Main extends Application {
 
-    static Scanner input = new Scanner(System.in);
+    /*static Scanner input = new Scanner(System.in);
     static String seperator = "----------";
     static String highlighter = "**********";
+    */
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent parent = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
+        primaryStage.setTitle("Gym");
+        primaryStage.setScene(new Scene(parent));
+        primaryStage.show();
+
+
+    }
 
     public static void main(String[] args) {
+        launch(args);
+    }
+
+    /*public static void main(String[] args) {
         Gym gym = new Gym("Jim", 120);
         menu(gym);
     }
@@ -213,4 +233,5 @@ public class Main {
             } else if (day != 0) System.out.println(seperator + " Day selection is not valid" + seperator);
         } while (day != 0);
     }
+    */
 }

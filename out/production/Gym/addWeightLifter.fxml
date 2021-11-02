@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <children>
+        <Button fx:id="switchMainMenu" layoutX="55.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleSwitchMainMenu" text="Main Menu" />
+        <Button fx:id="addWL" layoutX="170.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleAddBP" text="Add an athlete" />
+        <TextField fx:id="firstNameWL" layoutX="51.0" layoutY="56.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter firstname" />
+        <TextField fx:id="lastName" layoutX="51.0" layoutY="91.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter lastname" />
+        <Label layoutX="51.0" layoutY="200.0" prefHeight="17.0" prefWidth="84.0" text="Select gender:" />
+        <RadioButton layoutX="151.0" layoutY="200.0" mnemonicParsing="false" text="Male" />
+        <RadioButton layoutX="213.0" layoutY="200.0" mnemonicParsing="false" text="Female" />
+        <TextField layoutX="51.0" layoutY="127.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter weight" />
+        <TextField layoutX="51.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter height" />
+        <Label layoutX="51.0" layoutY="226.0" prefHeight="17.0" prefWidth="121.0" text="Select type of athlete:" />
+        <RadioButton layoutX="175.0" layoutY="226.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="131.0" text="Basketball player" />
+        <RadioButton layoutX="300.0" layoutY="226.0" mnemonicParsing="false" text="Weight lifter" />
+    </children>
+</AnchorPane>

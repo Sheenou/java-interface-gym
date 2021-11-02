@@ -29,6 +29,8 @@ public class Gym {
         }
     }
 
+    public String getAthletes() { return athletes.toString(); }
+
     public void athleteComes(int index) { this.athletes.get(index).comes(); }
 
     public void athleteTrains(int index) { this.athletes.get(index).trains(); }
