@@ -24,7 +24,7 @@ public class Controller {
     @FXML
     private Button printAthletesButton;
 
-//    Add a weightlifter
+//    Add an athlete
     @FXML
     private Button mainMenuButton;
 
@@ -50,7 +50,7 @@ public class Controller {
     private TextField maxWeight;
 
 
-//    Add an athlete
+//    Select athlete type
     @FXML
     private Button newWeightlifterButton;
 
